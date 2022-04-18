@@ -3,14 +3,14 @@ use Mix.Config
 # NOTE: this file contains some security keys/certs that are *not* secrets, and are only used for local development purposes.
 
 host = "smartexpo.bitallium.com"
-cors_proxy_host = "smartexpo.bitallium.com"
-assets_host = "smartexpo.bitallium.com"
-link_host = "smartexpo.bitallium.com"
+cors_proxy_host = "hubs-proxy.local"
+assets_host = "hubs-assets.local"
+link_host = "hubs-link.local"
 
 # To run reticulum across a LAN for local testing, uncomment and change the line below to the LAN IP
 # host = cors_proxy_host = "192.168.1.27"
 
-dev_janus_host = "dev-janus.reticulum.io"
+dev_janus_host = "smartexpo.bitallium.com"
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
