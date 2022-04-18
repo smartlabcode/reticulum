@@ -29,14 +29,14 @@ config :ret, RetWeb.Endpoint,
     certfile: "/etc/letsencrypt/live/#{host}/cert.pem"
   ],
   cors_proxy_url: [scheme: "https", host: cors_proxy_host, port: 443],
-  assets_url: [scheme: "https", host: assets_host, port: 8080],
+  assets_url: [scheme: "https", host: assets_host, port: 443],
   link_url: [scheme: "https", host: link_host, port: 443],
   imgproxy_url: [scheme: "http", host: host, port: 5000],
   debug_errors: true,
   code_reloader: false, # this is important
   check_origin: false,
   # This config value is for local development only.
-  secret_key_base: "IPEZz6PSuCvNtC+sgeiWRs8fFuyS9lvTKU9Pp1A7PLYbnjBaUQa7fG5ql85ZBw+w",
+  secret_key_base: "txlMOtlaY5x3crvOCko4uV5PM29ul3zGo1oBGNO3cDXx+7GHLKqt0gR9qzgThxb5",
   allowed_origins: "*",
   allow_crawlers: true
 
@@ -96,10 +96,10 @@ config :ret,
   bot_access_key: ""
 
 config :ret, Ret.PageOriginWarmer,
-  hubs_page_origin: "https://smartexpo.bitallium.com:8080",
-  admin_page_origin: "https://smartexpo.bitallium.com:8989",
-  spoke_page_origin: "https://smartexpo.bitallium.com:9090",
-  insecure_ssl: false
+  hubs_page_origin: "https://#{host}:8080",
+  admin_page_origin: "https://#{host}:8989",
+  spoke_page_origin: "https://#{host}:9090",
+  insecure_ssl: true
 
 config :ret, Ret.HttpUtils, insecure_ssl: true
 
@@ -118,12 +118,12 @@ config :ret, Ret.Speelycaptor, speelycaptor_endpoint: "https://1dhaogh2hd.execut
 
 config :ret, Ret.Storage,
   host: "https://#{host}:4000",
-  storage_path: "/root/hubs-actions-runner/reticulum/storage",
+  storage_path: "/home/admin/hubs-actions-runner/reticulum/storage",
   ttl: 60 * 60 * 24
 
-asset_hosts =l
-  "https://smartexpo.bitallium.com:4000 https://smartexpo.bitallium.com:8080 " <>
-    "https://#{host}:4000 https://#{host}:8080 https://#{host}:3000 https://#{host}:8989 https://#{host}:9090 https://#{
+asset_hosts =
+  "https://localhost:4000 https://localhost:8080 " <>
+    "https://#{host} https://#{host}:4000 https://#{host}:8080 https://#{host}:3000 https://#{host}:8989 https://#{host}:9090 https://#{
       cors_proxy_host
     }:4000 " <>
     "https://assets-prod.reticulum.io https://asset-bundles-dev.reticulum.io https://asset-bundles-prod.reticulum.io"
