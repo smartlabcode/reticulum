@@ -2,8 +2,8 @@ use Mix.Config
 
 # NOTE: this file contains some security keys/certs that are *not* secrets, and are only used for local development purposes.
 
-host = "smartexpo.bitallium.com:8080"
-cors_proxy_host = "hubs-proxy.local"
+host = "smartexpo.bitallium.com"
+cors_proxy_host = "smartexpo.bitallium.com:8080"
 assets_host = "localhost"
 link_host = ""
 
