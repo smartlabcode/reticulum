@@ -10,7 +10,7 @@ link_host = "smartexpo.bitallium.com"
 # To run reticulum across a LAN for local testing, uncomment and change the line below to the LAN IP
 # host = cors_proxy_host = "192.168.1.27"
 
-dev_janus_host = "dev-janus.reticulum.io"
+dev_janus_host = "smartexpo.bitallium.com"
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
