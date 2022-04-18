@@ -118,7 +118,7 @@ config :ret, Ret.Speelycaptor, speelycaptor_endpoint: "https://1dhaogh2hd.execut
 
 config :ret, Ret.Storage,
   host: "https://#{host}:4000",
-  storage_path: "/hubs-actions-runner/reticulum/storage",
+  storage_path: "/home/admin/hubs-actions-runner/reticulum/storage",
   ttl: 60 * 60 * 24
 
 asset_hosts =
