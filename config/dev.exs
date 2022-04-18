@@ -2,7 +2,7 @@ use Mix.Config
 
 # NOTE: this file contains some security keys/certs that are *not* secrets, and are only used for local development purposes.
 
-host = "smartexpo.bitallium.com"
+host = "hubs.local"
 cors_proxy_host = "hubs-proxy.local"
 assets_host = "hubs-assets.local"
 link_host = "hubs-link.local"
@@ -160,7 +160,7 @@ asset_hosts =
 websocket_hosts =
   "https://localhost:4000 https://localhost:8080 wss://localhost:4000 " <>
     "https://#{host}:4000 https://#{host}:8080 wss://#{host}:4000 wss://#{host}:8080 wss://#{host}:8989 wss://#{host}:9090 " <>
-    "wss://#{host}:4000 wss://#{host}:8080 https://#{host}:8080 https://smartexpo.bitallium.com:8080 wss://smartexpo.bitallium.com:8080"
+    "wss://#{host}:4000 wss://#{host}:8080 https://#{host}:8080 https://hubs.local:8080 wss://hubs.local:8080"
 
 config :ret, RetWeb.Plugs.AddCSP,
   script_src: asset_hosts,
