@@ -4,7 +4,7 @@ use Mix.Config
 
 host = "smartexpo.bitallium.com"
 cors_proxy_host = "smartexpo.bitallium.com:8080"
-assets_host = "localhost"
+assets_host = "smartexpo.bitallium.com:8080"
 link_host = ""
 
 # To run reticulum across a LAN for local testing, uncomment and change the line below to the LAN IP
