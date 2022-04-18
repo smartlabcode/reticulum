@@ -99,7 +99,7 @@ config :ret, Ret.PageOriginWarmer,
   hubs_page_origin: "https://smartexpo.bitallium.com:8080",
   admin_page_origin: "https://smartexpo.bitallium.com:8989",
   spoke_page_origin: "https://smartexpo.bitallium.com:9090",
-  insecure_ssl: false
+  insecure_ssl: true
 
 config :ret, Ret.HttpUtils, insecure_ssl: true
 
@@ -123,7 +123,7 @@ config :ret, Ret.Storage,
 
 asset_hosts =l
   "https://smartexpo.bitallium.com:4000 https://smartexpo.bitallium.com:8080 " <>
-    "https://#{host}:4000 https://#{host}:8080 https://#{host}:3000 https://#{host}:8989 https://#{host}:9090 https://#{
+    "https://#{host} https://#{host}:4000 https://#{host}:8080 https://#{host}:3000 https://#{host}:8989 https://#{host}:9090 https://#{
       cors_proxy_host
     }:4000 " <>
     "https://assets-prod.reticulum.io https://asset-bundles-dev.reticulum.io https://asset-bundles-prod.reticulum.io"
