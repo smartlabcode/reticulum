@@ -29,7 +29,7 @@ config :ret, RetWeb.Endpoint,
     certfile: "/etc/letsencrypt/live/#{host}/cert.pem"
   ],
   cors_proxy_url: [scheme: "https", host: cors_proxy_host, port: 443],
-  assets_url: [scheme: "https", host: assets_host, port: 443],
+  assets_url: [scheme: "https", host: assets_host, port: 8080],
   link_url: [scheme: "https", host: link_host, port: 443],
   imgproxy_url: [scheme: "http", host: host, port: 5000],
   debug_errors: true,
